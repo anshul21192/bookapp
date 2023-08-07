@@ -1,10 +1,12 @@
-import SignIn from "./signIn/signIn";
+// import SignIn from "./signIn/signIn";
+import Dashboard from "./dashboard/dashboard";
 import "./index.css"
 
 function App() {
   return (
     <div className="App">
-    <SignIn></SignIn>
+    {/* <SignIn></SignIn> */}
+    <Dashboard/>
     </div>
   );
 }
