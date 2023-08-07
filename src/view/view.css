@@ -28,3 +28,11 @@
     display: flex !important;
     align-items: center;
 }
+
+.filter{
+    width: 10%;
+}
+
+.searchButton{
+    height: 100%;
+}
