@@ -2,7 +2,6 @@ import * as React from "react";
 
 function TradeStatus({status}){
     let tradeStatus=status;
-    console.log(status)
     // eslint-disable-next-line default-case
     switch(tradeStatus){
         case "MATURED":

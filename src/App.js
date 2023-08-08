@@ -6,7 +6,6 @@ import { Route, Routes } from "react-router-dom";
 import "./index.css"
 import SignIn from "./signIn/signIn";
 import Trade from "./trade/trade";
-
 function App() {
 
 
