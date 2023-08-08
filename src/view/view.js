@@ -3,7 +3,7 @@ import { BsSearch } from 'react-icons/bs';
 import '../view/view.css';
 import BookCard from "../card/bookcard";
 import tempData from '../temp2.json'; 
-function View(){
+function View({bookList}){
 
     const arr=tempData.data;
     function createElement(item){
