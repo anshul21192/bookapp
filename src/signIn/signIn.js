@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@mui/material";
 import { FcGoogle } from "react-icons/fc";
+// import { getBookData } from "../api";
 import { useState } from "react";
 import { checkUser } from "../api";
 
@@ -30,9 +31,14 @@ function SignIn() {
 
     const navigate = useNavigate();
 
-    const signInUser=()=>{
-        checkUser({email:userMail,password:userPassword});
-        navigate('/dashboard');
+    const signInUser = async ()=>{
+      let datas;
+      datas=await checkUser({email:userMail,password:userPassword});
+      if(datas){
+        const arr=userMail.split("@");
+        console.log(arr);
+        navigate(`/dashboard/${arr[0]}`);
+      }
     }
 
   return (
@@ -56,6 +62,7 @@ function SignIn() {
         <h2>
         Sign In using google :          
         </h2>
+
         <FcGoogle size={30}></FcGoogle>
       </div>
       <Button variant="contained" className="signButton" onClick={signInUser} >SIGN IN</Button>

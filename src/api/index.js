@@ -1,18 +1,32 @@
 import axios from "axios";
 
 
-function getBookData(){
-    axios.get('https://api.example.com/data')
+async function getBookData(data){
+
+  let value=[];
+
+    await axios.get(`http://localhost:8080/book/user/${data}`)
     .then(response => {
-      console.log(response)
+      value=response.data;
     })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
+
+    return value;
 }
 
-function checkUser(data){
-    console.log(data);
+async function checkUser(data){
+    let value;
+   await axios.post('http://localhost:8080/users/checkUserExist',data)
+    .then(response => {
+      value=response.data;
+    })
+    .catch(error => {
+      window.alert('something went wrong');
+      value=false;
+    });
+    return value
 }
 
 export {
