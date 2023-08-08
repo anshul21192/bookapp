@@ -4,13 +4,15 @@ import '../card/bookcard.css';
 
 function BookCard({...item}){
     const navigate = useNavigate();
-    let companyName=item.companyName;
-    let tradeCnt=item.tradeCnt;
-    const openTrades=()=>{
-        navigate('/book');
+    let companyName=item.name;
+    let tradeCnt=item.trade.length;
+    const openTrades=(name)=>{
+        navigate(`/trade/${name}`);
     }
 
-    return <div className="bookcard" key={tradeCnt} onClick={openTrades} > 
+    return <div className="bookcard" key={tradeCnt} onClick={()=>{
+        openTrades(companyName);
+    }}  > 
             <Grid>
                 Company Name:   <strong>{companyName}</strong>
             </Grid>
