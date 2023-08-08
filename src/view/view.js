@@ -1,4 +1,4 @@
-import { Button, Container, FormControl, Grid, InputLabel, MenuItem, Select, TextField } from "@mui/material";
+import { Button, Container,  Grid, TextField } from "@mui/material";
 import { BsSearch } from 'react-icons/bs';
 import '../view/view.css';
 import BookCard from "../card/bookcard";
@@ -10,28 +10,7 @@ function View({bookList}){
     }
     return <Container className="view" >
         <Grid className="search-filter">
-            <Grid className="filter">
-                
-
-            <FormControl fullWidth className="filterOption">
-            <InputLabel id="demo-simple-select-label">Status</InputLabel>
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                // value={age}
-                label="Filter"
-                // onChange={handleChange}
-            >
-                <MenuItem value={"All"}>All</MenuItem>
-                <MenuItem value={20}>Mature</MenuItem>
-                <MenuItem value={30}>Unmature</MenuItem>
-                <MenuItem value={40}>Failed</MenuItem>
-            </Select>
-            </FormControl>  
-
-
-
-            </Grid>
+            <Grid></Grid>
             <Grid className="search">
             <TextField id="filled-basic" label="Search Title" variant="filled" />
             <Button className="searchButton" variant="contained"><BsSearch></BsSearch></Button>
