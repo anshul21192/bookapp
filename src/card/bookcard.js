@@ -1,10 +1,16 @@
 import { Grid } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 import '../card/bookcard.css';
 
 function BookCard(props){
 
-    console.log(234567);
-    return <div className="bookcard" key={props.keys} > 
+    const navigate = useNavigate();
+
+    const openTrades=()=>{
+        navigate('/book');
+    }
+
+    return <div className="bookcard" key={props.keys} onClick={openTrades} > 
             <Grid>
                 Company Name:{props.data.companyName || "db"}
             </Grid>
