@@ -11,12 +11,27 @@ import {
   TextField,
 } from "@mui/material";
 import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import { checkUser } from "../api";
 
 function SignIn() {
+
+    const [userMail,setUserMail] = useState('');
+    const [userPassword,setUserPassword] = useState('');
+    console.log(userPassword,userMail);
+
+    const setUserMailFunction=(e)=>{
+        setUserMail(e.target.value);
+    }
+
+    const setUserPasswordFunction=(e)=>{
+        setUserPassword(e.target.value)
+    }
 
     const navigate = useNavigate();
 
     const signInUser=()=>{
+        checkUser({email:userMail,password:userPassword});
         navigate('/dashboard');
     }
 
@@ -25,8 +40,8 @@ function SignIn() {
       <LockOutlinedIcon fontSize="large" />
       <h1>Sign In</h1>
       <div className="input_field">
-        <TextField id="outlined-basic" label="Email" variant="outlined" />
-        <TextField id="outlined-basic" label="Password" variant="outlined" type="password" />
+        <TextField id="outlined-basic" label="Email" variant="outlined" value={userMail} onChange={setUserMailFunction} />
+        <TextField id="outlined-basic" label="Password" variant="outlined" type="password" value={userPassword} onChange={setUserPasswordFunction} />
       </div>
       <Container>
         <Checkbox defaultChecked />

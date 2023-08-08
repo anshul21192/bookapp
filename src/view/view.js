@@ -56,7 +56,6 @@ function View(){
         <Grid className="list">
             {
                 arr.map((ele,idx) => {
-                    console.log(idx)
                     return <BookCard data={ele} keys={idx}></BookCard>
                 })
             }
