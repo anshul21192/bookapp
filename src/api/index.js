@@ -2,13 +2,15 @@ import axios from "axios";
 
 
 function getBookData(){
-    axios.get('https://api.example.com/data')
+  console.log(234567);
+    axios.get('http://localhost:8080/users/allUsers')
     .then(response => {
-      setData(response.data);
+      console.log(response);
     })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
 }
-
-export default getBookData;
+export {
+  getBookData
+};

@@ -11,12 +11,14 @@ import {
   TextField,
 } from "@mui/material";
 import { FcGoogle } from "react-icons/fc";
+import { getBookData } from "../api";
 
 function SignIn() {
 
     const navigate = useNavigate();
 
     const signInUser=()=>{
+      getBookData();
         navigate('/dashboard');
     }
 
@@ -41,6 +43,7 @@ function SignIn() {
         <h2>
         Sign In using google :          
         </h2>
+
         <FcGoogle size={30}></FcGoogle>
       </div>
       <Button variant="contained" className="signButton" onClick={signInUser} >SIGN IN</Button>
