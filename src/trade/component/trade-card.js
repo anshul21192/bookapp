@@ -27,7 +27,7 @@ function TradeCard({...item}){
                     <p>Trade Date: {tradeDate}</p>
                     <p>Settlement Date:{settleDate}</p>
                     <p>Security ID: {securityID}</p>
-                    <TradeType type={buy_sell}></TradeType>
+                    <TradeType buy_sell={buy_sell}></TradeType>
                 </div>
             </div>
 }

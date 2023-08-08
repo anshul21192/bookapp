@@ -1,35 +1,21 @@
 import { Button, Container, FormControl, Grid, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import { BsSearch } from 'react-icons/bs';
-
 import '../view/view.css';
 import BookCard from "../card/bookcard";
-
+import tempData from '../temp2.json'; 
 function View(){
 
-    const arr=[{companyName:1,trades:1},
-        {companyName:2,trades:11},
-        {companyName:3,trades:12},
-        {companyName:4,trades:6},
-        {companyName:5,trades:1},
-        {companyName:5,trades:1},
-        {companyName:5,trades:1},
-        {companyName:5,trades:1},
-        {companyName:5,trades:1},
-        {companyName:5,trades:1},
-        {companyName:5,trades:1},
-        {companyName:5,trades:1},
-        {companyName:5,trades:1},
-
-    ]
-
-
+    const arr=tempData.data;
+    function createElement(item){
+        return <BookCard {...item}></BookCard>
+    }
     return <Container className="view" >
         <Grid className="search-filter">
             <Grid className="filter">
                 
 
             <FormControl fullWidth className="filterOption">
-            <InputLabel id="demo-simple-select-label">filter</InputLabel>
+            <InputLabel id="demo-simple-select-label">Status</InputLabel>
             <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
@@ -39,8 +25,8 @@ function View(){
             >
                 <MenuItem value={"All"}>All</MenuItem>
                 <MenuItem value={20}>Mature</MenuItem>
-                <MenuItem value={30}>fail</MenuItem>
-                <MenuItem value={30}>third</MenuItem>
+                <MenuItem value={30}>Unmature</MenuItem>
+                <MenuItem value={30}>Failed</MenuItem>
             </Select>
             </FormControl>
 
@@ -55,10 +41,7 @@ function View(){
         </Grid>
         <Grid className="list">
             {
-                arr.map((ele,idx) => {
-                    console.log(idx)
-                    return <BookCard data={ele} keys={idx}></BookCard>
-                })
+                arr.map(createElement)
             }
         </Grid>
     </Container>
