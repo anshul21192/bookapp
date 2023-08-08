@@ -1,10 +1,11 @@
 import SignIn from "./signIn/signIn";
-import "./index.css"
+import Trade from "./trade/trade";
+import "./index.css";
 
 function App() {
   return (
     <div className="App">
-    <SignIn></SignIn>
+      <Trade></Trade>
     </div>
   );
 }
