@@ -1,0 +1,38 @@
+.view{
+    border: 2px solid blue;
+    height: 90vh;
+    display: flex !important;
+    flex-direction: column;
+
+}
+
+.test{
+    border: 2px solid black;
+}
+
+.search-filter{
+    border: 2px solid violet ;
+    display: flex !important;
+    justify-content: space-between;
+    margin:10px;
+    padding: 10px;
+}
+
+.list{
+    border: 2px solid yellow;
+    height: 80vh;
+    overflow: scroll;
+}
+
+.search{
+    display: flex !important;
+    align-items: center;
+}
+
+.filter{
+    width: 10%;
+}
+
+.searchButton{
+    height: 100%;
+}
