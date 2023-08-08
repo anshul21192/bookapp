@@ -23,11 +23,13 @@
 }
 
 .search{
+    background-color: white;
     display: flex !important;
     align-items: center;
 }
 
 .filter{
+    background-color: white;
     width: 10%;
 }
 

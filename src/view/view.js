@@ -26,9 +26,9 @@ function View(){
                 <MenuItem value={"All"}>All</MenuItem>
                 <MenuItem value={20}>Mature</MenuItem>
                 <MenuItem value={30}>Unmature</MenuItem>
-                <MenuItem value={30}>Failed</MenuItem>
+                <MenuItem value={40}>Failed</MenuItem>
             </Select>
-            </FormControl>
+            </FormControl>  
 
 
 

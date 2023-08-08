@@ -2,7 +2,7 @@
     border: 2px solid rgb(2, 2, 2);
     background-color: rgba(247, 211, 211, 0.87);
     height: 50px;
-    border-radius:10px ;
+    border-radius:5px ;
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between;
