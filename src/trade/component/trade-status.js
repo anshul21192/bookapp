@@ -4,15 +4,15 @@ function TradeStatus({status}){
     let tradeStatus=status;
     // eslint-disable-next-line default-case
     switch(tradeStatus){
-        case "MATURED":
+        case "Matured":
             return <div className="img" style={{"backgroundColor":"orange","border":"solid 2px"}}>     
                 <span style={{"padding":"5px","margin":"5px","color":"white"}}>Matured</span>
             </div>;
-        case "FAILED":
+        case "Failed":
             return <div className="img" style={{"backgroundColor":"red","border":"solid 2px"}}>     
                 <span style={{"padding":"5px","margin":"5px","color":"white"}}>Failed</span>
             </div>;
-        case "UN-MATURED":
+        case "UnMatured":
             return <div className="img" style={{"backgroundColor":"violet","border":"solid 2px"}}>     
                 <span style={{"padding":"5px","margin":"5px","color":"white"}}>Unmatured</span>
             </div>;

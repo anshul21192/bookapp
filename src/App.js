@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/dashboard/:user" element={<Dashboard></Dashboard>} />
           <Route exact path="/" element={<SignIn></SignIn>} />
-          <Route exact path="/book" element={<Trade></Trade>} />
+          <Route exact path="/trade/:bookname" element={<Trade></Trade>} />
         </Routes>
     </>
   );

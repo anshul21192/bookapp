@@ -3,15 +3,15 @@ import TradeType from "./trade-type";
 import "../trade.css";  
 import TradeStatus from "./trade-status";
 function TradeCard({...item}){
-    let id=item.ID;
-    let counterPartyID=item.CounterpartyID;
-    let securityID=item.SecurityID;
-    let quantity=item.Quantity;
-    let status=item.Status;
-    let price=item.Price;
-    let buy_sell=item.BUY_SELL;
-    let tradeDate=item.TradeDate;
-    let settleDate=item.SettlementDate;
+    let id=item.id;
+    let counterPartyID=item.CounterpartyID || "db";
+    let securityID=item.SecurityID || "abc123";
+    let quantity=item.quantity;
+    let status=item.status;
+    let price=item.price;
+    let buy_sell=item.buySell;
+    let tradeDate=item.tradeDate;
+    let settleDate=item.settlementDate;
     // console.log(id);
     return  <div className="job_card">
                 <div className="job_details">

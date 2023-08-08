@@ -2,11 +2,14 @@ import { Grid } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import '../card/bookcard.css';
 
+
 function BookCard({...item}){
     const navigate = useNavigate();
     let companyName=item.name;
-    let tradeCnt=item.trade.length;
-    const openTrades=(name)=>{
+    let tradeCnt=item.trades?.length;
+
+
+    const openTrades= async (name)=>{
         navigate(`/trade/${name}`);
     }
 

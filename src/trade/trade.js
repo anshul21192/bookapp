@@ -2,14 +2,29 @@ import "../trade/trade.css";
 import * as React from 'react';
 import TradeSearch from './component/trade-search';
 import TradeCard from './component/trade-card';
-import tempData from '../temp.json';
+import { useEffect,useState } from "react";
+import { useParams } from "react-router-dom";
+import { getTradeData } from "../api";
 
 function Trade(){
-    let data= tempData.data;
-    let bookID=data[0].BookID;
+    const [tradeInfo,setTradeInfo] = useState([]);
+    const id = useParams();
+
+    let data= tradeInfo;
+    let bookID=id?.bookname;
     function createElement(item){
         return <TradeCard {...item}></TradeCard>
     }
+
+    const getTradeInfo= async ()=>{
+        const data = await getTradeData(id.bookname);
+        setTradeInfo(data);
+    }
+
+    useEffect(()=>{
+        getTradeInfo();
+    })
+
     return <>
     <div className="container">
         <section className="main">

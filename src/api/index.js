@@ -16,6 +16,21 @@ async function getBookData(data){
     return value;
 }
 
+async function getTradeData(data){
+
+  let value=[];
+
+    await axios.get(`http://localhost:8080/trade/book/${data}`)
+    .then(response => {
+      value=response.data;
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+
+    return value;
+}
+
 async function checkUser(data){
     let value;
    await axios.post('http://localhost:8080/users/checkUserExist',data)
@@ -31,5 +46,6 @@ async function checkUser(data){
 
 export {
     getBookData,
-    checkUser
+    checkUser,
+    getTradeData
 };

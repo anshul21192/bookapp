@@ -18,19 +18,19 @@ function Dashboard(){
          console.log(data);
     }
 
-    useEffect(()=>{
+    // useEffect(()=>{
         getBookInfo();
-    });
+    // });
 
-    // if(bookList.length!==0){
+    if(bookList && bookList.length!==0){
         return <div className="dashboard" > 
         <Navbar/>
         <View bookList={bookList} />
     </div>
-    // }
-    // else{
-    //     return <h2>Loading......</h2>
-    // }
+    }
+    else{
+        return <h2>Loading......</h2>
+    }
 }
 
 export default Dashboard;
