@@ -47,7 +47,7 @@ function Trade(){
                 <h1>BOOK ID:  {bookID}  | Trade List!</h1>
             </div>
             <div className="main-body">
-                <TradeSearch chageq={chageq} ></TradeSearch>
+                <TradeSearch chageq={chageq} currentStatus={currentStatus} data={data} ></TradeSearch>
                 {
                     data.map(createElement)
                 }
