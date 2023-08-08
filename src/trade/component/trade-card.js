@@ -2,10 +2,10 @@ import * as React from "react";
 import TradeType from "./trade-type";
 import "../trade.css";  
 import TradeStatus from "./trade-status";
-function TradeCard(tradeType){
+function TradeCard({type,status}){
     return  <div className="job_card">
                 <div className="job_details">
-                    <TradeStatus></TradeStatus>
+                    <TradeStatus status={status}></TradeStatus>
                     <div className="text">
                         <h1>Trade ID: 123-xycz</h1>
                         <span>Counter Party: DB</span>
@@ -16,7 +16,7 @@ function TradeCard(tradeType){
                     <p>Quantity: 43</p>
                     <p>Trade Date: 12/08/2023</p>
                     <p>Settlement Date: 13/08/2023</p>
-                    <TradeType></TradeType>
+                    <TradeType type={type}></TradeType>
                 </div>
             </div>
 }

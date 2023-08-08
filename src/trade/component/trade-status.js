@@ -1,18 +1,19 @@
 import * as React from "react";
 
-function TradeStatus(){
-    let tradeStatus="matured"
+function TradeStatus({status}){
+    let tradeStatus=status;
+    console.log(status)
     // eslint-disable-next-line default-case
     switch(tradeStatus){
-        case "matured":
+        case "MATURED":
             return <div className="img" style={{"backgroundColor":"orange","border":"solid 2px"}}>     
                 <span style={{"padding":"5px","margin":"5px","color":"white"}}>Matured</span>
             </div>;
-        case "failed":
+        case "FAILED":
             return <div className="img" style={{"backgroundColor":"red","border":"solid 2px"}}>     
                 <span style={{"padding":"5px","margin":"5px","color":"white"}}>Failed</span>
             </div>;
-        case "unmatured":
+        case "UN-MATURED":
             return <div className="img" style={{"backgroundColor":"violet","border":"solid 2px"}}>     
                 <span style={{"padding":"5px","margin":"5px","color":"white"}}>Unmatured</span>
             </div>;

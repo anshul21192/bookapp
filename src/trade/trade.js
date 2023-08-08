@@ -8,6 +8,10 @@ import TradeCard from './component/trade-card';
 
 
 function Trade(){
+    let data={
+        'type':"BUY",
+        'status':'FAILED'
+    }
     return <>
     <div className="container">
         <section className="main">
@@ -15,15 +19,13 @@ function Trade(){
                 <h1>Trade List!</h1>
             </div>
             <div className="main-body">
-                <TradeSearch ></TradeSearch>
-                <TradeCard ></TradeCard>
-                <TradeCard></TradeCard>
-                <TradeCard ></TradeCard>
-                <TradeCard></TradeCard>
-                <TradeCard ></TradeCard>
-                <TradeCard></TradeCard>
-                <TradeCard ></TradeCard>
-                <TradeCard></TradeCard>
+                <TradeSearch></TradeSearch>
+                <TradeCard type={"BUY"} status={"UN-MATURED"}></TradeCard>
+                <TradeCard type={"SELL"} status={"MATURED"}></TradeCard>
+                <TradeCard type={"SELL"} status={"FAILED"}></TradeCard>
+                <TradeCard type={"BUY"} status={"MATURED"}></TradeCard>
+                <TradeCard type={"BUY"} status={"UN-MATURED"}></TradeCard>
+                <TradeCard type={"SELL"} status={"FAILED"}></TradeCard>
             </div>
         </section>
     </div>
