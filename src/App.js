@@ -2,18 +2,17 @@
 import Dashboard from "./dashboard/dashboard";
 // import { Router, Route } from 'react-router-dom';
 import "./index.css"
-// import SignIn from "./signIn/signIn";
+import SignIn from "./signIn/signIn";
 import Trade from "./trade/trade";
-
 function App() {
 
   // const navigate = useNavigate();
-
+  
   return (
     <div className="App">
-      <Trade></Trade>
-    {/* <SignIn></SignIn> */}
-    <Dashboard/>
+      {/* { <Dashboard/>} */}
+      {/* <Trade></Trade> */}
+    {<SignIn></SignIn>}
 
     {/* <Router> */}
         {/* <Route path="/" exact component={SignIn} /> */}

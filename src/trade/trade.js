@@ -1,31 +1,26 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "../trade/trade.css";
 import * as React from 'react';
 import TradeSearch from './component/trade-search';
-import TradeType from './component/trade-type';
 import TradeCard from './component/trade-card';
-
+import tempData from '../temp.json';
 
 function Trade(){
-    let data={
-        'type':"BUY",
-        'status':'FAILED'
+    let data= tempData.data;
+    let bookID=data[0].BookID;
+    function createElement(item){
+        return <TradeCard {...item}></TradeCard>
     }
     return <>
     <div className="container">
         <section className="main">
             <div className="main-top">
-                <h1>Trade List!</h1>
+                <h1>BOOK ID:  {bookID}  | Trade List!</h1>
             </div>
             <div className="main-body">
                 <TradeSearch></TradeSearch>
-                <TradeCard type={"BUY"} status={"UN-MATURED"}></TradeCard>
-                <TradeCard type={"SELL"} status={"MATURED"}></TradeCard>
-                <TradeCard type={"SELL"} status={"FAILED"}></TradeCard>
-                <TradeCard type={"BUY"} status={"MATURED"}></TradeCard>
-                <TradeCard type={"BUY"} status={"UN-MATURED"}></TradeCard>
-                <TradeCard type={"SELL"} status={"FAILED"}></TradeCard>
+                {
+                    data.map(createElement)
+                }
             </div>
         </section>
     </div>
