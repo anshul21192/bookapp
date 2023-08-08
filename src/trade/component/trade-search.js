@@ -1,6 +1,8 @@
 import "../trade.css";
 import * as React from 'react';
-import TradeStatus from "./trade-status";
+// import TradeStatus from "./trade-status";
+
+
 function TradeSearch(){
     return    <div className="search_bar">
         <input type="search" placeholder="Search Trade here..." />

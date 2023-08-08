@@ -1,6 +1,7 @@
 import "../signIn/signIn.css";
 import Container from "@mui/material/Container";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { useNavigate } from 'react-router-dom';
 import {
   Button,
   Checkbox,
@@ -12,6 +13,13 @@ import {
 import { FcGoogle } from "react-icons/fc";
 
 function SignIn() {
+
+    const navigate = useNavigate();
+
+    const signInUser=()=>{
+        navigate('/dashboard');
+    }
+
   return (
     <Container maxWidth="sm" className="signIn">
       <LockOutlinedIcon fontSize="large" />
@@ -35,7 +43,7 @@ function SignIn() {
         </h2>
         <FcGoogle size={30}></FcGoogle>
       </div>
-      <Button variant="contained" className="signButton" >SIGN IN</Button>
+      <Button variant="contained" className="signButton" onClick={signInUser} >SIGN IN</Button>
       <Container className="thirdSection" >
         <Link href="https://www.example.com">Forgot Password?</Link>
         <Link href="https://www.example.com">
