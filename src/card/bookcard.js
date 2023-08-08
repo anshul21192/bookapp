@@ -3,7 +3,7 @@ import '../card/bookcard.css';
 
 function BookCard(props){
 
-
+    console.log(234567);
     return <div className="bookcard" key={props.keys} > 
             <Grid>
                 Company Name:{props.data.companyName || "db"}
