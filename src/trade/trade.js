@@ -25,6 +25,7 @@ function Trade(){
         getTradeInfo();
     })
 
+
     return <>
     <div className="container">
         <section className="main">
