@@ -38,7 +38,8 @@
 
 .main-body {
     padding-left: 10%;
-    background-image: url('dashBG.jpg');
+    height: 100vh;
+    background-image: url('dashBG.jpg') ;
 }
 
 h1 {
