@@ -15,7 +15,6 @@ function Dashboard(){
     const getBookInfo= async ()=>{
          const data = await getBookData(id.user);
          setBookList(data);
-         console.log(data);
     }
 
     useEffect(()=>{

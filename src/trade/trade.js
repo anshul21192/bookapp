@@ -13,6 +13,11 @@ function Trade(){
 
     let data= tradeInfo;
     let bookID=id?.bookname;
+
+    const chageq=(data)=>{
+        setCurrrentStatus(data || 'all');
+    }
+
     function createElement(item){
         return <TradeCard {...item}></TradeCard>
     }
@@ -42,7 +47,7 @@ function Trade(){
                 <h1>BOOK ID:  {bookID}  | Trade List!</h1>
             </div>
             <div className="main-body">
-                <TradeSearch setCurrrentStatus={setCurrrentStatus} ></TradeSearch>
+                <TradeSearch chageq={chageq} ></TradeSearch>
                 {
                     data.map(createElement)
                 }
