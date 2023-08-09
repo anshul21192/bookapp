@@ -8,6 +8,7 @@ import { getTradeData } from "../api";
 
 function Trade(){
     const [tradeInfo,setTradeInfo] = useState([]);
+    const [currentStatus,setCurrrentStatus] = useState('all');
     const id = useParams();
 
     let data= tradeInfo;
@@ -18,11 +19,19 @@ function Trade(){
 
     const getTradeInfo= async ()=>{
         const data = await getTradeData(id.bookname);
-        setTradeInfo(data);
+        const arr = data.filter((ele)=>{
+            if(currentStatus==='all'){
+                return ele;
+            }
+            else if(currentStatus===ele.status){
+                return ele;
+            }
+        })
+        setTradeInfo(arr);
     }
 
     useEffect(()=>{
-        getTradeInfo();
+          getTradeInfo();
     })
 
     return <>
@@ -32,7 +41,7 @@ function Trade(){
                 <h1>BOOK ID:  {bookID}  | Trade List!</h1>
             </div>
             <div className="main-body">
-                <TradeSearch></TradeSearch>
+                <TradeSearch setCurrrentStatus={setCurrrentStatus} ></TradeSearch>
                 {
                     data.map(createElement)
                 }

@@ -18,9 +18,9 @@ function Dashboard(){
          console.log(data);
     }
 
-    // useEffect(()=>{
+    useEffect(()=>{
         getBookInfo();
-    // });
+    });
 
     if(bookList && bookList.length!==0){
         return <div className="dashboard" > 
