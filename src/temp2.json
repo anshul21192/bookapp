@@ -1,43 +1,125 @@
 {
     "data":[
-        {
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        },{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-        ,{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-        ,{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-         ,{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-        ,{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-         ,{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-        ,{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-         ,{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-        ,{
-            "companyName":"temp-companyName",
-            "tradeCnt":145
-        }
-    ]
+ {
+    "id": 1,
+    "name": "US Government Bond",
+    "isin": "US1234567890",
+    "cusip": "123456AAA",
+    "Issuer": "US Treasury",
+    "maturityDate": "2023-12-31",
+    "coupon": 0.05,
+    "type": "Bond",
+    "faceValue": 1000.00,
+    "status": "UnMatured"
+  },
+   {
+    "id": 2,
+    "name": "Tech Corporation Bond",
+    "isin": "US9876543210",
+    "cusip": "654321BBB",
+    "Issuer": "Tech Inc.",
+    "maturityDate": "2024-06-30",
+    "coupon": 0.03,
+    "type": "Bond",
+    "faceValue": 1500.00,
+    "status": "UnMatured"
+  },
+  {
+    "id": 3,
+    "name": "Canadian Bond",
+    "isin": "CA5555555555",
+    "cusip": "888888CCC",
+    "Issuer": "Canada Gov.",
+    "maturityDate": "2023-09-15",
+   "coupon": 0.06,
+    "type": "Bond",
+    "faceValue": 800.00,
+    "status": "Matured"
+  },
+  {
+    "id": 4,
+    "name": "Japanese Government",
+    "isin": "JP7777777777",
+    "cusip": "777777DDD",
+    "Issuer": "JPN Gov.",
+    "maturityDate": "2025-01-01",
+    "coupon": 0.04,
+    "type": "Bond",
+    "faceValue": 1200.00,
+    "status": "UnMatured"
+  },
+  {
+    "id": 5,
+    "name": "European Corp. Bond",
+    "isin": "EU8888888888",
+    "cusip": "888888EEE",
+    "Issuer": "Euro Corp.",
+ "maturityDate": "2023-12-15",
+    "coupon": 0.03,
+    "type": "Bond",
+    "faceValue": 1100.00,
+    "status": "UnMatured"
+  },
+  {
+    "id": 6,
+    "name": "Municipal Bond",
+    "isin": "US5555555555",
+    "cusip": "555555FFF",
+    "Issuer": "City Mun.",
+    "maturityDate": "2024-09-30",
+    "coupon": 0.04,
+    "type": "Bond",
+    "faceValue": 900.00,
+    "status": "UnMatured"
+  },
+  {
+    "id": 7,
+    "name": "Asian Govt. Bond",
+    "isin": "AS7777777777",
+    "cusip": "777777GGG",
+    "Issuer": "Asia Gov.",
+    "maturityDate": "2025-05-20",
+    "coupon": 0.03,
+    "type": "Bond",
+    "faceValue": 1300.00,
+    "status": "UnMatured"
+  },
+{
+    "id": 8,
+    "name": "Global Corp. Bond",
+    "isin": "GL8888888888",
+    "cusip": "888888HHH",
+    "Issuer": "Global Co.",
+    "maturityDate": "2024-07-15",
+    "coupon": 0.05,
+    "type": "Bond",
+    "faceValue": 1600.00,
+    "status": "Matured"
+  },
+  {
+    "id": 9,
+    "name": "Energy Company Bond",
+    "isin": "US9999999999",
+    "cusip": "999999III",
+    "Issuer": "Energy Inc.",
+    "maturityDate": "2023-10-01",
+    "coupon": 0.04,
+    "type": "Bond",
+  "faceValue": 1400.00,
+    "status": "UnMatured"
+  },
+  {
+    "id": 10,
+    "name": "Healthcare Corp. Bond",
+    "isin": "US1010101010",
+    "cusip": "101010JJJ",
+    "Issuer": "Health Inc.",
+    "maturityDate": "2024-03-10",
+    "coupon": 0.06,
+    "type": "Bond",
+    "faceValue": 1200.00,
+    "status":"Matured"
+}
+
+]
 }

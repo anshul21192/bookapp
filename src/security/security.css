@@ -39,7 +39,7 @@
 .main-body {
     padding-left: 10%;
     height: 100vh;
-    background-image: url('dashBG.jpg') ;
+    background-image: url('dashBG.jpg');
     overflow: scroll;
 }
 
@@ -81,11 +81,11 @@ h1 {
     cursor: pointer;
     display: flex;
     border-radius: 10px;
-    background: rgb(216, 205, 226, 0.8);
     margin-bottom: 15px;
     justify-content: space-between;
     border: 2px solid rgb(190, 190, 190);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    background: rgb(216, 205, 226, 0.8);
 }
 
 .job_details {
@@ -124,7 +124,8 @@ h1 {
     border: 2px solid blueviolet;
     transition: 0.4s;
 }
-.tradeDate{
+
+.tradeDate {
     display: block;
-    align:space-between;
+    align: space-between;
 }
