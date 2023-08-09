@@ -1,4 +1,5 @@
 .dashboard{
     width: 100%;
-    background-image: url('dashBG.jpg')
+    background-image: url('dashBG.jpg');
+    background-size:contain;
 }
